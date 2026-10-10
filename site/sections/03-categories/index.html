@@ -1,1 +1,64 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Categories — ALI PARTNER</title><link rel="stylesheet" href="../../styles.css"></head><body><header class="topbar"><a class="brand" href="../../index.html">ALI PARTNER</a></header><main class="hero"><p class="eyebrow">ALI PARTNER / SECTION</p><h1>Categories</h1><p>AI, marketing, websites, e-commerce, CRM, email, automation, design, education, productivity and more.</p><a class="button" href="../../index.html">Back to platform</a></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the ALI PARTNER business category taxonomy preview.">
+  <title>Business Categories — ALI PARTNER</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="./categories.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">ALI PARTNER</a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../02-marketplace/index.html">Marketplace</a>
+      <a href="../06-search/index.html">Search</a>
+      <a href="../07-compare/index.html">Compare</a>
+    </nav>
+  </header>
+  <main class="categories-page">
+    <section class="categories-hero" aria-labelledby="categories-title">
+      <p class="eyebrow">SECTION 03 / DISCOVERY</p>
+      <h1 id="categories-title">Find your business category.</h1>
+      <p>Start with the area you need help with, then explore the available marketplace preview.</p>
+      <p class="taxonomy-notice"><strong>Taxonomy preview:</strong> these category groups are illustrative. They are not yet connected to a shared live catalog, and no listing counts or supplier availability are implied.</p>
+    </section>
+
+    <section class="category-controls" aria-label="Category filters">
+      <div class="category-control">
+        <label for="category-search">Search categories</label>
+        <input id="category-search" type="search" placeholder="Try AI, website, email, or productivity" autocomplete="off" aria-controls="category-grid">
+      </div>
+      <div class="category-control">
+        <label for="category-group">Area</label>
+        <select id="category-group" aria-controls="category-grid">
+          <option value="all">All areas</option>
+          <option value="digital">Digital & technology</option>
+          <option value="growth">Marketing & growth</option>
+          <option value="operations">Business operations</option>
+        </select>
+      </div>
+      <p id="category-status" class="category-status" role="status" aria-live="polite">Showing all 8 category groups</p>
+    </section>
+
+    <section aria-labelledby="category-list-title">
+      <div class="category-list-heading">
+        <div>
+          <p class="eyebrow">BROWSE BY NEED</p>
+          <h2 id="category-list-title">Explore categories</h2>
+        </div>
+      </div>
+      <div id="category-grid" class="category-grid"></div>
+      <p id="category-empty" class="category-empty" hidden>No categories match that search. Try a broader term or choose all areas.</p>
+    </section>
+    <footer class="categories-footer">
+      <p>Next connection: align category IDs and publication rules with the shared marketplace catalog.</p>
+      <a class="button" href="../02-marketplace/index.html">Explore demo marketplace</a>
+      <a class="back-link" href="../../index.html">← Back to ALI PARTNER home</a>
+    </footer>
+  </main>
+  <script src="./categories.js"></script>
+</body>
+</html>
