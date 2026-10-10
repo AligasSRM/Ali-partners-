@@ -2,6 +2,50 @@
 
 > **Purpose:** Make it safe to stop work and resume later without losing the actual project state. This is an evidence-backed work log, not a claim that planned features are implemented.
 
+## Session record — 2026-10-10 — Section 02 marketplace functional slice
+
+### Repository state
+- **Repository:** `AligasSRM/Ali-partners-`
+- **Implementation branch:** `feat/section-02-marketplace-functional`
+- **Parent feature branch:** `feat/section-01-home-functional`
+- **Section 01 PR:** [PR #3](https://github.com/AligasSRM/Ali-partners-/pull/3), open and draft; not merged.
+- **Section 02 PR:** not yet created at time of this note.
+- **Architecture:** compatibility map and product structure remain unchanged.
+
+### What changed
+- Replaced the Section 02 placeholder with a responsive marketplace browsing page.
+- Added separate `marketplace.css` and `marketplace.js`.
+- Added three clearly labeled illustrative demo listings, with no claims of real providers, verified suppliers, live offers, or prices.
+- Implemented case-insensitive search across listing title, description, category label, and keywords.
+- Implemented category filtering, combined search + category filtering, result count, accessible live status, and empty state.
+- Added `tests/marketplace.test.mjs` for demo labeling, filtering, category combinations, immutability, and local references.
+- Updated the GitHub Actions workflow to run all `tests/*.test.mjs` files.
+
+### Validation and limits
+- GitHub accepted the content writes; commits were created on the implementation branch.
+- Automated CI for the current branch has not yet been checked in this note.
+- Local browser/live deployment has not been verified; GitHub Pages is not confirmed enabled.
+- Listings are static demonstration data, not the shared catalog. There is no backend, real company ownership, publication review, authentication, or verified marketplace data.
+
+### Status
+- 🟢 Section 02 source implementation committed.
+- 🟡 Section 02 automated tests: awaiting GitHub Actions result.
+- 🟡 Section 02 live browser acceptance: not verified.
+- 🟡 Section 01 remains under PR #3 review; do not claim full acceptance or merge.
+- 🔒 Architecture baseline unchanged.
+- 🔴 Real shared catalog and production marketplace backend remain unimplemented.
+
+### Next steps
+1. Check GitHub Actions for the current Section 02 branch and fix any test failures at root cause.
+2. Open a draft PR for Section 02 targeting `feat/section-01-home-functional` so the change remains stacked and reviewable without merging.
+3. Keep both PRs unmerged until reviewed and explicitly approved.
+4. Continue with Section 03 only after the Section 02 slice has been reviewed.
+
+### Exact resume point
+Branch: `feat/section-02-marketplace-functional`. Latest recorded changes include marketplace HTML/CSS/JS, marketplace tests, and the workflow update. First action: inspect Actions status for this branch. Do not change repository protection settings.
+
+---
+
 ## Session record — 2026-10-10 — Section 01 first functional slice
 
 ### Repository state
@@ -34,7 +78,7 @@
 - 🟡 **Section 01 acceptance:** not fully GREEN until the PR diff is reviewed and desktop/mobile behavior is checked in a real browser.
 - 🟡 **Deployment:** not verified.
 - 🔒 **Architecture baseline:** unchanged.
-- 🔴 **Sections 02–19 functional behavior:** not yet implemented/verified.
+- 🔴 **Sections 02–19 functional behavior:** not yet implemented/verified at the time of this record.
 
 ### Remaining work
 1. Review [PR #3](https://github.com/AligasSRM/Ali-partners-/pull/3) and its diff.
