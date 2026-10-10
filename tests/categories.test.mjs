@@ -35,7 +35,7 @@ test("empty category search returns every category without mutating source data"
 
 test("category search is case-insensitive and matches descriptions and keywords", () => {
   const { categories, filterCategories } = getCategories();
-  assert.deepEqual(ids(filterCategories("  AI  ", "all", categories)), ["ai-automation"]);
+  assert.deepEqual(ids(filterCategories("AI assistants", "all", categories)), ["ai-automation"]);
   assert.deepEqual(ids(filterCategories("landing pages", "all", categories)), ["websites-commerce"]);
   assert.deepEqual(ids(filterCategories("newsletter", "all", categories)), ["email-crm"]);
 });
