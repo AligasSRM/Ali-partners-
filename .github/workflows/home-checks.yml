@@ -1,4 +1,4 @@
-name: Home section checks
+name: ALI PARTNER functional section checks
 
 on:
   push:
@@ -19,5 +19,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Run home section tests
-        run: node --test tests/home.test.mjs
+      - name: Run functional section tests
+        run: node --test tests/*.test.mjs
