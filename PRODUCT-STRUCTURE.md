@@ -1,7 +1,7 @@
 # ALI PARTNER — Product Structure
 
 **Canonical architecture specification:** [COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md)  
-This file summarizes the product layers and expansion scope. If any detail conflicts with the compatibility map, the compatibility map is authoritative.
+This file summarizes the product layers and expansion scope. If any detail conflicts with the compatibility map, the compatibility map is authoritative. Section 20 is an internal project-continuity control, not a customer-facing product module.
 
 ## Product position
 
@@ -43,6 +43,9 @@ ALI PARTNER is a marketplace-first business discovery and partner platform with 
 ### Modular operating suite
 19. ALI Business Studio
 
+### Project continuity
+20. Project Notes & Handover — session inventory, verified evidence, current status, blockers, remaining tasks, next-session objective and exact resume point. See [PROJECT-NOTES.md](PROJECT-NOTES.md).
+
 Section 19 groups the operating-tool scope into one modular workspace instead of scattering it across unrelated public pages. Its modules may include:
 
 - Website Builder
@@ -73,4 +76,4 @@ These modules are planned capabilities, not currently implemented functionality.
 
 ## Build rule
 
-Use [COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md) as the stable contract for section boundaries, shared entities, dependencies, delivery phases and acceptance gates. Build small, testable slices; record evidence; and do not mark planned or placeholder functionality GREEN.
+Use [COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md) as the stable contract for section boundaries, shared entities, dependencies, delivery phases and acceptance gates. At the end of every work session, update [PROJECT-NOTES.md](PROJECT-NOTES.md) before pausing. Build small, testable slices; record evidence; and do not mark planned or placeholder functionality GREEN.
