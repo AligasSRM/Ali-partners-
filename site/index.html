@@ -10,7 +10,7 @@
 <body>
   <header class="topbar">
     <a class="brand" href="./index.html">ALI PARTNER</a>
-    <nav>
+    <nav aria-label="Primary navigation">
       <a href="./sections/02-marketplace/index.html">Marketplace</a>
       <a href="./sections/03-categories/index.html">Categories</a>
       <a href="./sections/06-search/index.html">Search</a>
@@ -20,22 +20,49 @@
     </nav>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" aria-labelledby="home-title">
       <p class="eyebrow">BUSINESS PLATFORM</p>
-      <h1>Discover, launch and grow your business.</h1>
+      <h1 id="home-title">Discover, launch and grow your business.</h1>
       <p>One place to discover business products and services, compare solutions, learn, and connect with trusted partners.</p>
       <div class="actions">
         <a class="button" href="./sections/02-marketplace/index.html">Explore Marketplace</a>
         <a class="button secondary" href="./sections/12-partner-with-ali/index.html">Partner With ALI</a>
       </div>
     </section>
-    <section class="grid">
-      <a href="./sections/02-marketplace/index.html"><strong>Marketplace</strong><span>Products and services</span></a>
-      <a href="./sections/07-compare/index.html"><strong>Compare</strong><span>Evaluate solutions</span></a>
-      <a href="./sections/09-verified/index.html"><strong>ALI Verified</strong><span>Trust and quality signals</span></a>
-      <a href="./sections/10-learn/index.html"><strong>Learn</strong><span>Guides and education</span></a>
-      <a href="./sections/11-tools/index.html"><strong>Free Tools</strong><span>Useful business utilities</span></a>
-      <a href="./sections/13-partner-network/index.html"><strong>Partner Network</strong><span>Affiliate and referral ecosystem</span></a>
+    <section class="discovery" aria-labelledby="discovery-title">
+      <div class="discovery-heading">
+        <div>
+          <p class="eyebrow">START HERE</p>
+          <h2 id="discovery-title">Explore ALI PARTNER</h2>
+          <p class="discovery-intro">Find the area that fits what you want to do. This finder searches platform sections, not product listings.</p>
+        </div>
+        <div class="section-finder">
+          <label for="section-search">Find a section</label>
+          <input id="section-search" class="section-search" type="search" placeholder="Try marketplace, compare, learning…" autocomplete="off" aria-controls="discovery-grid">
+          <p id="section-search-status" class="search-status" role="status" aria-live="polite">Showing all 6 sections</p>
+        </div>
+      </div>
+      <div class="grid" id="discovery-grid">
+        <a href="./sections/02-marketplace/index.html" data-title="Marketplace" data-description="Products and services" data-keywords="browse discover catalog companies">
+          <strong>Marketplace</strong><span>Products and services</span>
+        </a>
+        <a href="./sections/07-compare/index.html" data-title="Compare" data-description="Evaluate solutions" data-keywords="compare evaluate pricing features">
+          <strong>Compare</strong><span>Evaluate solutions</span>
+        </a>
+        <a href="./sections/09-verified/index.html" data-title="ALI Verified" data-description="Trust and quality signals" data-keywords="trust verification evidence quality">
+          <strong>ALI Verified</strong><span>Trust and quality signals</span>
+        </a>
+        <a href="./sections/10-learn/index.html" data-title="Learn" data-description="Guides and education" data-keywords="academy guides tutorials education">
+          <strong>Learn</strong><span>Guides and education</span>
+        </a>
+        <a href="./sections/11-tools/index.html" data-title="Free Tools" data-description="Useful business utilities" data-keywords="calculators generators checklists productivity">
+          <strong>Free Tools</strong><span>Useful business utilities</span>
+        </a>
+        <a href="./sections/13-partner-network/index.html" data-title="Partner Network" data-description="Affiliate and referral ecosystem" data-keywords="partners affiliate referrals companies">
+          <strong>Partner Network</strong><span>Affiliate and referral ecosystem</span>
+        </a>
+      </div>
+      <p id="section-search-empty" class="empty-state" hidden>No sections match that search. Try another word or clear the search field.</p>
     </section>
   </main>
   <script src="./app.js"></script>
