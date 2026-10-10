@@ -1,26 +1,24 @@
 # ALI PARTNER — Product Structure
 
-## Benchmark reviewed
+**Canonical architecture specification:** [COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md)  
+This file summarizes the product layers and expansion scope. If any detail conflicts with the compatibility map, the compatibility map is authoritative.
 
-We reviewed systeme.io's current public feature structure. Its core model is an integrated all-in-one business platform centered on website building, sales funnels, email marketing, automation, affiliate management, courses, bookings, CRM pipelines, webinars, communities, physical products, sub-accounts and related tools. citeturn0search0turn0search3
+## Product position
 
-ALI PARTNER will use that *structural logic* as a benchmark — one coherent platform rather than disconnected tools — but will not copy its product, UI, content or implementation.
+ALI PARTNER is a marketplace-first business discovery and partner platform with a future modular business operating suite. It uses the broad structural logic of integrated business platforms as a benchmark, but does not copy another product's UI, content, or implementation.
 
-## Structural decision
+## Four connected layers
 
-ALI PARTNER has three layers:
+1. **Discovery & trust (01–09):** Home, marketplace, categories, product/company pages, search, compare, deals, and evidence-backed verification.
+2. **Content & acquisition (10–11):** Learn / Academy and free business utilities.
+3. **Partner & workspace operations (12–16):** partner applications, partner network, user/company workspaces, referral attribution and commission reporting.
+4. **Business operating suite & infrastructure (19, 17–18):** ALI Business Studio modules first; financial payout and external API/reseller/white-label capabilities only after their prerequisites and validation gates pass.
 
-1. **Discovery layer** — marketplace, categories, search, product/company pages, compare, deals and verification.
-2. **Business operating layer** — websites, funnels, email, CRM, automation, bookings, courses, webinars, store and business tools.
-3. **Partner layer** — affiliate/referral/reseller relationships, company workspace, commissions, payouts, API and white-label.
+## Canonical section inventory
 
-This lets us be broader than a pure all-in-one marketing suite while keeping a familiar, coherent business-platform structure.
-
-## Sections
-
-### Public / Discovery
+### Public discovery, trust and acquisition
 01. Home
-02. Marketplace
+02. Business Marketplace
 03. Categories
 04. Product Pages
 05. Company Pages
@@ -33,18 +31,19 @@ This lets us be broader than a pure all-in-one marketing suite while keeping a f
 12. Partner With ALI
 13. ALI Partner Network
 
-### Business Workspace
+### Identity and partner operations
 14. User Dashboard
 15. Company Dashboard
 16. Commission / Earnings
 
-### Future Platform Infrastructure
+### Future infrastructure
 17. Wallet / Payouts
 18. API / Reseller / White-label
 
-## Planned business-tool expansion
+### Modular operating suite
+19. ALI Business Studio
 
-The operating layer is intentionally aligned with proven all-in-one patterns:
+Section 19 groups the operating-tool scope into one modular workspace instead of scattering it across unrelated public pages. Its modules may include:
 
 - Website Builder
 - Landing Pages / Sales Funnels
@@ -61,19 +60,17 @@ The operating layer is intentionally aligned with proven all-in-one patterns:
 - Blog / Content / SEO
 - Sub-accounts / Workspaces
 
-These are inspired by the category structure visible in systeme.io, not copied from it. systeme.io publicly describes these capabilities as integrated under one dashboard. citeturn0search0turn0search4
+These modules are planned capabilities, not currently implemented functionality. They must be released individually, based on validated demand and with their own data contracts, authorization, lifecycle, audit events and tests.
 
-## What makes ALI PARTNER different
+## Differentiation
 
-- Marketplace-first discovery rather than only a creator/business operating suite.
-- Multi-company catalog and company profiles.
-- Comparison and verification as first-class features.
-- Deals and partner discovery.
-- Affiliate + referral + reseller + marketplace relationships.
-- Future API and white-label ecosystem.
+- Marketplace-first discovery and multi-company catalog.
+- Comparison and scoped verification as first-class features.
+- Offers and partner discovery.
+- Affiliate, referral, reseller and marketplace relationships with distinct states and terms.
 - Free business utilities as acquisition tools.
-- A staged architecture: validate demand before building expensive backend infrastructure.
+- A staged architecture that validates demand before expensive infrastructure.
 
 ## Build rule
 
-We will first make the complete information architecture and public shell coherent. Then we will implement the highest-value working slices one by one, test them, and only then expand into accounts, commissions, payouts and integrations.
+Use [COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md) as the stable contract for section boundaries, shared entities, dependencies, delivery phases and acceptance gates. Build small, testable slices; record evidence; and do not mark planned or placeholder functionality GREEN.
