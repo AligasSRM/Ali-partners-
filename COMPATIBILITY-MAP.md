@@ -1,7 +1,7 @@
 # ALI PARTNER — Final Compatibility Map & Product Specification
 
-**Status:** 🟡 Baseline specification for review  
-**Scope:** Product architecture and dependencies for Sections 01–19  
+**Status:** 🟢 Approved baseline / 🔒 architecture locked  
+**Scope:** Product architecture and project-continuity controls for Sections 01–20  
 **Purpose:** Establish one stable product contract so implementation can proceed section by section without repeatedly redesigning the architecture.
 
 ## 1. Decision and change-control rule
@@ -16,14 +16,16 @@ Any approved change must update this file, affected section contracts, and tests
 
 ## 2. Product layers
 
-ALI PARTNER has four connected layers:
+ALI PARTNER has four product layers plus a cross-cutting project-continuity function:
 
 1. **Discovery & trust (Sections 01–09):** Help visitors discover, evaluate, and assess business products, services, companies, offers, and verification claims.
 2. **Content & acquisition (Sections 10–11):** Educate visitors and provide useful free tools that bring relevant traffic into discovery.
 3. **Partner & workspace operations (Sections 12–16):** Onboard companies, manage partner relationships, support user/company workspaces, and report attributable performance.
 4. **Business operating suite and infrastructure (Sections 19, 17–18):** Add integrated business tools only after demand and workspace foundations are proven; add payouts and external integrations behind security and commercial gates.
 
-## 3. Canonical section map (19 sections)
+**Section 20 is a project-operations function, not a customer-facing product layer.** It records the real state of the repository, decisions, verified work, blockers, remaining tasks, and the next-session objective so work can stop safely and resume later.
+
+## 3. Canonical section map (20 sections)
 
 | ID | Section | Responsibility / boundary | Key dependencies |
 |---|---|---|---|
@@ -46,10 +48,15 @@ ALI PARTNER has four connected layers:
 | 17 | Wallet / Payouts | Financial ledger views, payout eligibility, methods, approval controls, reconciliation, and statements. Not a bank account or stored-value product by default. | 16; payment provider and legal/compliance review |
 | 18 | API / Reseller / White-label | Versioned external interfaces, access scopes, rate limits, reseller contracts, tenant boundaries, and white-label configuration. | Stable domain contracts; security review; 15 and/or 19 |
 | 19 | ALI Business Studio | Future integrated business-tool workspace: website/landing-page builder, funnels, email marketing, CRM/pipelines, automation, booking calendar, courses/memberships, webinars, community, store, affiliate management, templates, blog/content/SEO, and sub-accounts/workspaces. Deliver these as modules, not one giant release. | Identity/access control; 15; permissions, tenant model, audit logs, and module-specific data contracts |
+| 20 | Project Notes & Handover | Internal project continuity log: end-of-session inventory, verified changes, statuses, decisions, blockers, remaining work, next-session objective, and exact resume point. Never present notes as proof of tests that were not run. | Repository state, PR/commit evidence, test results, and the current compatibility map |
 
 ### Numbering rule
 
 Keep Sections 01–18 stable to avoid breaking existing paths and references. Section 19 is added as **ALI Business Studio** because the operating-tool scope is too large and cross-cutting to hide inside “Free Business Tools” or the partner network. The numbering is an identifier, not a delivery order.
+
+### Section 20 operating rule
+
+At the end of each work session, update `PROJECT-NOTES.md` with: (1) date/session, (2) actual repository/branch/commit, (3) work completed with evidence, (4) GREEN/YELLOW/RED/LOCKED statuses, (5) unresolved issues and risks, (6) what remains, (7) the single next-session objective and ordered next steps, and (8) an exact resume point. Separate verified facts from assumptions. If work stops early, record the blocker and the safest next action. Do not mark the whole project GREEN because documentation or a build exists. Keep a short dated history; never overwrite prior session records without reason.
 
 ## 4. Shared domain model — canonical concepts
 
@@ -149,3 +156,5 @@ For a static documentation or layout-only stage, state the limited scope and do 
 The repository currently contains a public landing-page shell and 18 section placeholder pages. The presence of those files does **not** mean the described capabilities exist. The shared data model, working search/catalog, authentication, partner workflows, ledger, payouts, and Business Studio are specification-level/planned until separately implemented and tested.
 
 **Baseline decision:** use this map as the single architecture reference for implementation planning. Changes require an explicit reason and synchronized documentation/tests; ordinary feature work should follow the map rather than restart architecture discussions.
+
+**Section 20 decision:** every work session ends with a repository-backed handover note. The note records the true state and the next objective so the project can be paused and resumed without reconstructing the entire discussion.
