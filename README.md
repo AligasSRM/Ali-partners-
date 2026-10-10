@@ -7,7 +7,7 @@
 
 ## Architecture source of truth
 
-**[COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md) is the canonical product architecture and compatibility specification.** It defines the 19-section map, shared domain model, dependencies, delivery gates, and change-control rules. If this README or older notes conflict with that map, the map governs until documentation is synchronized.
+**[COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md) is the canonical product architecture and compatibility specification.** It defines the 20-section map, shared domain model, dependencies, delivery gates, and change-control rules. If this README or older notes conflict with that map, the map governs until documentation is synchronized.
 
 ## Vision
 
@@ -41,8 +41,9 @@ This project uses the general business-platform model as a structural benchmark,
 17. **Wallet / Payouts** — controlled financial ledger and payout operations, gated by legal, provider and security review.
 18. **API / Reseller / White-label** — versioned integrations and partner distribution, after internal contracts stabilize.
 19. **ALI Business Studio** — future modular business workspace: websites, landing pages/funnels, email marketing, CRM/pipelines, automation, bookings, courses/memberships, webinars, community, store, affiliate management, templates, blog/content/SEO and sub-accounts.
+20. **Project Notes & Handover** — internal session log recording verified progress, statuses, blockers, remaining work, next-day goals, and the exact resume point.
 
-Section numbers are stable identifiers, not delivery order. See the canonical compatibility map for dependency and rollout order.
+Section numbers are stable identifiers, not delivery order. Section 20 is an internal project-management function, not a public product feature. See [PROJECT-NOTES.md](PROJECT-NOTES.md) for the session template and current handover; see the canonical compatibility map for dependency and rollout order.
 
 ## Delivery Plan
 
@@ -73,4 +74,4 @@ Section numbers are stable identifiers, not delivery order. See the canonical co
 
 ## Current Stop Point
 
-**🟡 Foundation / planning.** The repository currently contains a landing-page shell and 18 section placeholder pages. Those files are not proof that the described functionality exists. The next work follows `COMPATIBILITY-MAP.md`: establish shared catalog contracts and implement the first small public discovery slice, with tests before expansion.
+**🟡 Foundation / planning.** The repository currently contains a landing-page shell and 18 original section placeholder pages; Section 20 is being added as a project-notes/handover page. The documented business capabilities remain unimplemented until separately built and tested. Those files are not proof that the described functionality exists. The next work follows `COMPATIBILITY-MAP.md`: establish shared catalog contracts and implement the first small public discovery slice, with tests before expansion.
