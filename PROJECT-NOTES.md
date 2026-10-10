@@ -2,65 +2,57 @@
 
 > **Purpose:** Make it safe to stop work and resume later without losing the actual project state. This is an evidence-backed work log, not a claim that planned features are implemented.
 
-## How to use Section 20
+## Session record — 2026-10-10 — Section 01 first functional slice
 
-At the end of every session, update this file. Keep dated session records; add a new record instead of erasing the prior history. Record exact branch/commit/PR links where available. Distinguish verified facts from assumptions. Every next-session plan must start from the repository's actual state, not memory alone.
-
-## Current project snapshot
-
-- **Project:** ALI PARTNER
+### Repository state
+- **Repository:** `AligasSRM/Ali-partners-`
+- **Base branch:** `main`
+- **Implementation branch:** `feat/section-01-home-functional`
+- **Base commit:** `8408d3fde4cb9c9c46dca3c4f985b4abba26be74`
+- **Latest implementation commit at handover update:** to be verified after this note commit.
 - **Canonical architecture:** [COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md)
 - **Product structure:** [PRODUCT-STRUCTURE.md](PRODUCT-STRUCTURE.md)
-- **Project status:** 🟡 Planning baseline is approved; runtime features remain largely placeholders and need inspection/implementation.
-- **Section count:** 20 — Sections 01–19 describe product capabilities; Section 20 records project continuity.
-- **Last verified documentation merge:** [PR #1](https://github.com/AligasSRM/Ali-partners-/pull/1), merge commit `72ba00390bd3fe85920a95ffffce72e509cab841`.
-- **Important limitation:** Documentation was read back from `main`; this does not establish that the site is deployed or that business features work.
 
-## Session record — 2026-10-10
+### What was changed
+- Updated canonical homepage `site/index.html` with an accessible “Find a section” search field and explicit copy clarifying it searches platform sections, not product listings.
+- Updated `site/app.js` with case-insensitive filtering across section title, description, and keywords; result count and empty state are announced via a live status region.
+- Updated `site/styles.css` for responsive layout, visible keyboard focus, reduced-motion preference, and filtered/empty states.
+- Added `tests/home.test.mjs` using Node's built-in test runner to cover empty queries, case-insensitive matching, keyword/description matching, no-match behavior, source-array immutability, and local links referenced by the homepage.
+- Added `.github/workflows/home-checks.yml` to run the tests on branch pushes and pull requests.
 
-### What was done — verified
-
-- Approved the architecture baseline with **19 product sections plus Section 20 for project notes and handover**.
-- Merged the compatibility map and aligned README/product structure on `main` (PR #1, merge commit above).
-- Confirmed that the canonical map, README, and PRODUCT-STRUCTURE.md are present on `main`.
-- Created a separate branch `docs/section-20-project-notes` for the Section 20 addition. Changes on this branch are not yet merged.
+### Evidence and validation
+- The five file writes returned successful GitHub commit responses on `feat/section-01-home-functional`.
+- A local clone/test attempt could not run because this environment could not resolve `github.com`; this is an environment/network limitation, not a test failure.
+- **Automated test status:** 🟡 pending GitHub Actions run and review of its actual result.
+- **Live website status:** 🟡 not tested; deployment is not confirmed/enabled.
+- No backend, product catalog, authentication, partner approval, or marketplace data behavior was added or claimed.
 
 ### Status
+- 🟢 **Section 01 interaction implemented in branch:** section finder logic and UI have been committed; automated verification still pending.
+- 🟡 **Section 01 acceptance:** not GREEN until CI tests pass and desktop/mobile behavior is checked.
+- 🟡 **Deployment:** not verified.
+- 🔒 **Architecture baseline:** unchanged.
+- 🔴 **Sections 02–19 functional behavior:** not yet implemented/verified.
 
-- 🟢 **Architecture baseline:** approved and merged.
-- 🟢 **Section 20 decision:** approved by project owner.
-- 🟡 **Section 20 files and navigation:** created and read back on the working branch; check PR #2 and deployment state before claiming it is published.
-- 🟡 **Existing website shell:** previously inspected; current section pages are placeholders. Reinspect before implementation.
-- 🔴 **Real catalog/search/authentication/partner workflows/ledger/payouts/Business Studio:** not yet verified as implemented; do not claim functionality.
-
-### Open items / risks
-
-- Ensure the new notes page is reachable from the site and does not get mistaken for a public business feature.
-- Confirm whether the hosting/deployment configuration actually publishes the site; do not assume.
-- Preserve Section 20 as a durable handover log and keep previous session entries.
-- No automated tests or live deployment verification have been performed as part of this documentation-only change.
-
-### Next session objective
-
-**Begin the first real public-discovery implementation slice only after checking the actual repository state.** Start by inspecting the current tree, site routes, hosting/deployment setup and test capability; then define the shared catalog contract and choose the smallest testable catalog/marketplace slice.
-
-### Ordered next steps
-
-1. Read this handover and inspect `main` plus any open PRs/branches.
-2. Verify the current website entry point, section links, deployment workflow and available test tooling.
-3. Define the canonical Company, Product/Service and Category data shapes before wiring marketplace/search/compare.
-4. Implement one thin slice, add appropriate tests, run them, and record exact evidence.
-5. Update Section 20 before stopping work again.
+### Remaining work
+1. Verify the branch's latest commit and GitHub Actions result.
+2. Fix any test failures before opening/merging a PR.
+3. Review the diff and open a pull request for Section 01.
+4. Do not merge or mark GREEN unless the tests and scope are reviewed.
+5. After this slice is accepted, implement the shared catalog contract and the first marketplace/category slice as required by the compatibility map.
 
 ### Exact resume point
-
-Start by checking PR #2 and the current `main` branch in repository `AligasSRM/Ali-partners-`. If PR #2 is still open, finish read-back validation and merge it; if merged, verify the merge commit. Then inspect the current repository, site routes, deployment setup and tests before feature implementation.
+Check the current head of `feat/section-01-home-functional`, fetch the `Home section checks` workflow run result, then inspect the full diff. Keep the work on the feature branch; do not change `main` or repository protection settings as part of this task.
 
 ---
 
-## Reusable end-of-session template
+## Project snapshot
+- **Project status:** 🟡 architecture approved; runtime features remain largely placeholders and must be implemented and verified individually.
+- **Canonical architecture:** [COMPATIBILITY-MAP.md](COMPATIBILITY-MAP.md)
+- **Product structure:** [PRODUCT-STRUCTURE.md](PRODUCT-STRUCTURE.md)
+- **Important limitation:** Presence of a page or a successful commit is not proof of deployed or working business functionality.
 
-Copy this block for each new work session and fill it with actual evidence.
+## Reusable end-of-session template
 
 ### Session — YYYY-MM-DD
 
