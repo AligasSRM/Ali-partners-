@@ -18,10 +18,12 @@ function getMarketplace() {
   return sandbox.window.AliPartnerMarketplace;
 }
 
+const ids = (items) => Array.from(items, (item) => item.id);
+
 test("marketplace starts with clearly identified demo listings", () => {
   const { demoListings } = getMarketplace();
   assert.equal(demoListings.length, 3);
-  assert.ok(demoListings.every((listing) => listing.id.startsWith("demo-")));
+  assert.ok(Array.from(demoListings).every((listing) => listing.id.startsWith("demo-")));
   assert.match(page, /illustrative demo content/i);
   assert.match(script, /no real provider or offer/i);
 });
@@ -34,22 +36,22 @@ test("empty search shows all listings", () => {
 
 test("search is case-insensitive and matches title, description, and keywords", () => {
   const { demoListings, filterListings } = getMarketplace();
-  assert.deepEqual(filterListings("  WEBSITE  ", "all", demoListings).map((x) => x.id), ["demo-digital-service"]);
-  assert.deepEqual(filterListings("campaign planning", "all", demoListings).map((x) => x.id), ["demo-marketing-service"]);
-  assert.deepEqual(filterListings("productivity", "all", demoListings).map((x) => x.id), ["demo-business-software"]);
+  assert.deepEqual(ids(filterListings("  WEBSITE  ", "all", demoListings)), ["demo-digital-service"]);
+  assert.deepEqual(ids(filterListings("campaign planning", "all", demoListings)), ["demo-marketing-service"]);
+  assert.deepEqual(ids(filterListings("productivity", "all", demoListings)), ["demo-business-software"]);
 });
 
 test("category filter narrows results and combines with search", () => {
   const { demoListings, filterListings } = getMarketplace();
-  assert.deepEqual(filterListings("", "marketing", demoListings).map((x) => x.id), ["demo-marketing-service"]);
-  assert.deepEqual(filterListings("website", "marketing", demoListings), []);
+  assert.deepEqual(ids(filterListings("", "marketing", demoListings)), ["demo-marketing-service"]);
+  assert.equal(filterListings("website", "marketing", demoListings).length, 0);
 });
 
 test("no-match query returns an empty result without mutating source data", () => {
   const { demoListings, filterListings } = getMarketplace();
-  const originalIds = demoListings.map((x) => x.id);
+  const originalIds = ids(demoListings);
   assert.equal(filterListings("nothing-matches", "all", demoListings).length, 0);
-  assert.deepEqual(demoListings.map((x) => x.id), originalIds);
+  assert.deepEqual(ids(demoListings), originalIds);
 });
 
 test("marketplace local styles and script references exist", () => {
