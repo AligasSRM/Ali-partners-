@@ -29,7 +29,7 @@ At the end of every session, update this file. Keep dated session records; add a
 
 - 🟢 **Architecture baseline:** approved and merged.
 - 🟢 **Section 20 decision:** approved by project owner.
-- 🟡 **Section 20 files and navigation:** being added on a separate branch; not yet merged or deployment-tested.
+- 🟡 **Section 20 files and navigation:** created and read back on the working branch; check PR #2 and deployment state before claiming it is published.
 - 🟡 **Existing website shell:** previously inspected; current section pages are placeholders. Reinspect before implementation.
 - 🔴 **Real catalog/search/authentication/partner workflows/ledger/payouts/Business Studio:** not yet verified as implemented; do not claim functionality.
 
@@ -54,7 +54,7 @@ At the end of every session, update this file. Keep dated session records; add a
 
 ### Exact resume point
 
-Start at the repository `AligasSRM/Ali-partners-`, branch `docs/section-20-project-notes` for the pending Section 20 documentation changes. PR #1 is already merged. Finish and verify the Section 20 change, merge it only after read-back validation, then inspect the current repository and deployment before feature implementation.
+Start by checking PR #2 and the current `main` branch in repository `AligasSRM/Ali-partners-`. If PR #2 is still open, finish read-back validation and merge it; if merged, verify the merge commit. Then inspect the current repository, site routes, deployment setup and tests before feature implementation.
 
 ---
 
