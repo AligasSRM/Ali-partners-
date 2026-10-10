@@ -1,1 +1,61 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Business Marketplace — ALI PARTNER</title><link rel="stylesheet" href="../../styles.css"></head><body><header class="topbar"><a class="brand" href="../../index.html">ALI PARTNER</a></header><main class="hero"><p class="eyebrow">ALI PARTNER / SECTION</p><h1>Business Marketplace</h1><p>Discover and browse products and services from participating companies.</p><a class="button" href="../../index.html">Back to platform</a></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the ALI PARTNER marketplace interface preview. Listings are demonstration data only.">
+  <title>Business Marketplace — ALI PARTNER</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="./marketplace.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../index.html">ALI PARTNER</a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../03-categories/index.html">Categories</a>
+      <a href="../06-search/index.html">Search</a>
+      <a href="../07-compare/index.html">Compare</a>
+    </nav>
+  </header>
+  <main class="marketplace-page">
+    <section class="marketplace-hero" aria-labelledby="marketplace-title">
+      <p class="eyebrow">SECTION 02 / DISCOVERY</p>
+      <h1 id="marketplace-title">Business Marketplace</h1>
+      <p>Explore the marketplace layout, search the sample listings, and filter by category.</p>
+      <p class="demo-notice"><strong>Preview mode:</strong> every listing below is illustrative demo content, not a real company, verified supplier, live offer, or confirmed price.</p>
+    </section>
+
+    <section class="marketplace-controls" aria-label="Marketplace filters">
+      <div class="marketplace-control">
+        <label for="listing-search">Search listings</label>
+        <input id="listing-search" type="search" placeholder="Try website, marketing, or software" autocomplete="off" aria-controls="listing-grid">
+      </div>
+      <div class="marketplace-control">
+        <label for="category-filter">Category</label>
+        <select id="category-filter" aria-controls="listing-grid">
+          <option value="all">All categories</option>
+          <option value="digital-services">Digital services</option>
+          <option value="marketing">Marketing</option>
+          <option value="business-software">Business software</option>
+        </select>
+      </div>
+      <p id="listing-status" class="listing-status" role="status" aria-live="polite">Showing 3 demo listings</p>
+    </section>
+
+    <section aria-labelledby="listing-heading">
+      <div class="listing-heading">
+        <h2 id="listing-heading">Explore listings</h2>
+        <span class="demo-tag">DEMO DATA</span>
+      </div>
+      <div id="listing-grid" class="listing-grid"></div>
+      <p id="listing-empty" class="listing-empty" hidden>No demo listings match those filters. Try another search or choose all categories.</p>
+    </section>
+    <footer class="marketplace-footer">
+      <p>Next planned connections: shared catalog, real company ownership, publication review, and verified listing data.</p>
+      <a href="../../index.html">← Back to ALI PARTNER home</a>
+    </footer>
+  </main>
+  <script src="./marketplace.js"></script>
+</body>
+</html>
