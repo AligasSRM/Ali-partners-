@@ -76,3 +76,63 @@ Copy this block for each new work session and fill it with actual evidence.
 - **Next steps (ordered):**
 - **Exact resume point:**
 - **Do not reopen unless:**
+
+
+---
+
+## Session record — 2026-10-10 — ALI PARTNER commercial vision and idea log
+
+### Purpose and strategic direction
+
+ALI PARTNER is being planned as a global commercial-opportunity and transaction-intermediation platform, not merely a directory of companies or a website-services marketplace. The platform should help sellers and companies present legitimate offers, reach relevant buyers, and complete transactions through trackable referrals. This is an approved planning direction, not proof of market demand or implemented functionality.
+
+### Preliminary decisions confirmed by the project owner
+
+- **Publishing:** Free for sellers and project owners; no mandatory subscription or upfront listing fee.
+- **Revenue model:** Success commission only, due when a transaction covered by a prior agreement is completed. No sale means no success commission.
+- **Scope:** Products, company/project sales, commercial opportunities, digital products, and other lawful saleable offerings may fit the long-term vision. Launch with a limited set of categories and validate them before broad expansion.
+- **Supplier acquisition:** Proactively contact companies, manufacturers, distributors, and suppliers to request authorized, accurate product details, pricing, offer terms, and permission to publish. Do not treat arbitrary internet listings as permission to republish.
+- **Company offers:** Aim to secure direct supplier relationships and, where achievable, negotiated or exclusive offers. Never imply a deal is exclusive or verified unless evidence supports that claim.
+- **Commission protection:** Design for written seller agreements, recorded customer referrals, timestamps and offer-version records, supplier acknowledgement of referrals, transaction confirmation, and a documented commission-settlement process. Account registration or an offer view alone does not prove a sale.
+- **Customer experience:** The homepage should surface selected offers and useful details. Ask for registration when a visitor performs higher-value actions such as saving an offer or submitting a purchase/quote request, rather than making registration an unnecessary barrier to all browsing.
+- **Approval gate:** Prepare the complete product map and visual blueprint for owner review before changing the product structure or implementing the new direction. Do not merge changes into `main` without explicit owner approval.
+
+### Proposed product areas (planning only)
+
+1. Homepage: selected offers, new opportunities, clear categories and search.
+2. Products and offers: physical goods, wholesale, supplier offers and time-limited promotions.
+3. Projects and business assets: companies, stores, digital products, brands, inventions and other legally marketable assets.
+4. Company and supplier relationships: company profiles, authorized offers, terms, and partner status.
+5. Offer detail page: source, specifications, verified price/terms where available, validity period, and a clear inquiry/quote/purchase request path.
+6. Buyer and seller accounts, with role-appropriate permissions.
+7. Referral and transaction records: unique referral IDs, buyer consent, supplier acknowledgement, deal status and commission ledger.
+8. Admin operations: listing review, fraud reports, dispute handling, supplier checks, expiry and commission alerts.
+9. Trust and compliance: privacy, data minimization, consent before sharing buyer details, lawful listing rights, clear terms, and country/category-specific review before handling regulated transactions.
+
+### Low-overhead operations and automation
+
+Prefer automation for listing expiry, basic form validation, referral IDs, activity logs, notifications, and follow-up reminders. Human review remains necessary for supplier authorization, suspicious offers, high-value deals, complaints, disputes, and commission exceptions. Staffing needs must be based on measured workload; do not promise a fully unattended marketplace.
+
+### Validation before expansion
+
+- Start with a small number of categories and a limited pilot of real, authorized suppliers.
+- Test whether suppliers agree to free publication in return for a success commission.
+- Validate referral attribution, sale confirmation, and commission collection before scaling.
+- Measure real supplier responses, buyer inquiries, completed transactions, disputes, and operating effort.
+- Treat the commercial model as a hypothesis to validate, not as proven demand or guaranteed revenue.
+
+### Cross-project notes and ideas policy
+
+For every active project, maintain a clearly named **Ideas & Evolution** section in its project notes/handover document. Record each idea with: problem or opportunity; intended goal; proposed direction; expected user/business value; dependencies; risks and assumptions; evidence needed; status (idea / evaluating / approved / deferred / rejected / implemented); next action; and whether owner approval is required. Keep ideas separate from implemented features and locked architecture. Never silently convert an idea into a requirement, modify a protected/main branch, or claim an idea is built. Add dated session records rather than deleting history. When resuming any project, inspect its actual repository and current notes before making changes.
+
+### Status at this record
+
+- **🟢 Planning decisions:** Captured from the project owner's explicit message on 2026-10-10.
+- **🟡 Product blueprint and visual design:** Not yet prepared for approval.
+- **🟡 Commercial validation:** Not yet performed; supplier interest, commissions, and conversion rates remain unverified.
+- **🔴 Production-grade referral/commission system:** Not implemented or verified as ready.
+- **🔒 Main-branch gate:** No merge to `main` without explicit owner approval.
+
+### Next action
+
+Prepare a visual sitemap/page blueprint and a short end-to-end buyer/seller/referral journey for review. First inspect the current repository and open PRs so the new vision is reconciled with existing work; preserve existing branches and do not merge them as part of this documentation update.
